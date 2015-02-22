@@ -22,8 +22,7 @@ features <- features[cols,]
 cols <- c(cols, 562, 563)
 wholeData <- wholeData[cols,]
 
-colnames(wholeData) <- c(features$V2, "Activity", "Subject")
-colnames(wholeData) <- tolower(colnames(wholeData))
+colnames(wholeData) <- tolower(c(features$V2, "Activity", "Subject"))
 
 currentActivity = 1
 for (currentActivityLabel in activityLabels$V2) {
